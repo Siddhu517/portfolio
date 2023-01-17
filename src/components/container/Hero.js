@@ -2,10 +2,13 @@ import React from "react";
 import userImg from "../assets/images/siddhu.png";
 const Hero = () => {
   const social_media = [
-    "logo-instagram",
-    "logo-facebook",
-    "logo-linkedin",
-    "logo-twitter",
+    { icon: "logo-instagram", link: "https://www.instagram.com/siddesh155" },
+    {
+      icon: "logo-facebook",
+      link: "https://www.facebook.com/siddesh.sadadekar.7/",
+    },
+    { icon: "logo-linkedin", link: "https://github.com/Siddhu517" },
+    { icon: "logo-twitter", link: "https://twitter.com/Siddhu_5_1_7_" },
   ];
   return (
     <section
@@ -41,12 +44,13 @@ const Hero = () => {
             className="mt-8 text-3xl flex items-center md:justify-start justify-center
             gap-5 "
           >
-            {social_media?.map((icon) => (
+            {social_media?.map((item, i) => (
               <div
-                key={icon}
+                key={i}
                 className="text-gray-600  hover:text-white cursor-pointer "
+                onClick={() => window.open(item.link, "_blank")}
               >
-                <ion-icon name={icon}></ion-icon>
+                <ion-icon name={item.icon}></ion-icon>
               </div>
             ))}
           </div>

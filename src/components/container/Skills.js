@@ -50,7 +50,7 @@ const Skills = () => {
     {
       logo: FaAws,
       name: "AWS",
-      count: 50,
+      count: 30,
     },
   ];
   return (

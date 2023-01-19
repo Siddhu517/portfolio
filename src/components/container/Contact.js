@@ -8,6 +8,16 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(form.current);
+    const name = formData.get("user_name");
+    const email = formData.get("user_email");
+    const message = formData.get("message");
+
+    if (!name || !email || !message) {
+      toast.error("All fields are required");
+      return;
+    }
+
     /* emailjs.com to use send email */
 
     emailjs
@@ -64,12 +74,14 @@ const Contact = () => {
               placeholder="Your Name"
               name="user_name"
               className=""
+              required
             />
             <input
               type="email"
               placeholder="Your Email Address"
               name="user_email"
               className=""
+              required
             />
             <textarea
               placeholder="Your message"

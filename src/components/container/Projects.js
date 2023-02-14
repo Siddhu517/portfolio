@@ -10,6 +10,8 @@ import keepNotes from "../assets/images/keepNotes.jpg";
 import TodoList from "../assets/images/todoList.jpg";
 import chat_AI from "../assets/images/chat_ai.jpg";
 import portfolio from "../assets/images/portfolio.jpg";
+import bookstore from "../assets/images/bookstore.jpg";
+import imageUploader from "../assets/images/imageUploader.jpg";
 
 const Projects = () => {
   const projects = [
@@ -42,6 +44,18 @@ const Projects = () => {
       name: "Portfolio-Website",
       github_link: "https://github.com/Siddhu517/portfolio",
       live_link: "https://portfolio-siddhesh-sadadekar.onrender.com/",
+    },
+    {
+      img: bookstore,
+      name: "Book_Store",
+      github_link: "https://github.com/Siddhu517/book-store-assignment",
+      live_link: "https://bookstore-18i9.onrender.com",
+    },
+    {
+      img: imageUploader,
+      name: "Image_Uploader",
+      github_link: "https://github.com/Siddhu517/ImageUploader",
+      live_link: "https://imageuploader-vog1.onrender.com",
     },
   ];
   return (
